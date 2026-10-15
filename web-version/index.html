@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Weekly Class Schedule</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <section>
+        <h1>My classes</h1>
+        <p class="sub">
+          Add a class once. It repeats on the same days every week.
+        </p>
+
+        <div class="panel">
+          <div id="mode" style="font-weight: 600">Add a class</div>
+
+          <label for="name">Class name</label>
+          <input type="text" id="name" placeholder="e.g. Biology 101" />
+
+          <label>Days</label>
+          <div class="days" id="days"></div>
+
+          <div class="row">
+            <div>
+              <label for="start">Starts</label>
+              <input type="time" id="start" value="09:00" />
+            </div>
+            <div>
+              <label for="end">Ends</label>
+              <input type="time" id="end" value="10:15" />
+            </div>
+          </div>
+
+          <label>Color</label>
+          <div class="sws" id="sws"></div>
+
+          <div class="err" id="err" role="alert"></div>
+
+          <div class="btns">
+            <button class="pri" id="save">Add class</button>
+            <button class="sec" id="cancel" hidden>Cancel</button>
+            <button class="sec" id="del" hidden>Delete</button>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="nav">
+          <button class="sec" id="prev" aria-label="Previous week">&lt;</button>
+          <button class="sec" id="now">This week</button>
+          <button class="sec" id="next" aria-label="Next week">&gt;</button>
+          <h2 id="range"></h2>
+        </div>
+
+        <div class="scroll">
+          <div class="grid" id="grid"></div>
+        </div>
+
+        <div class="empty" id="empty">
+          No classes yet. Add your first one to see it on the grid.
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
